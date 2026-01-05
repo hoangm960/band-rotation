@@ -74,8 +74,8 @@ const SongItem = ({ song, showRandomizeCheckbox = true }: SongItemProps) => {
         <p className="text-xs sm:text-sm">Likes: {song.likes} | Dislikes: {song.dislikes}</p>
       </div>
       <div className="flex flex-wrap items-center space-x-1 sm:space-x-2 mt-2 sm:mt-0">
-        <button onClick={handleLike} disabled={hasLiked} className={`p-1 text-xs sm:text-sm rounded ${hasLiked ? 'bg-gray-500' : 'bg-green-500'} text-white`}>Like</button>
-        <button onClick={handleDislike} disabled={hasDisliked} className={`p-1 text-xs sm:text-sm rounded ${hasDisliked ? 'bg-gray-500' : 'bg-red-500'} text-white`}>Dislike</button>
+        <button onClick={handleLike} disabled={hasLiked || playing} className={`p-1 text-xs sm:text-sm rounded ${hasLiked ? 'bg-gray-500' : 'bg-green-500'} text-white`}>Like</button>
+        <button onClick={handleDislike} disabled={hasDisliked || playing} className={`p-1 text-xs sm:text-sm rounded ${hasDisliked ? 'bg-gray-500' : 'bg-red-500'} text-white`}>Dislike</button>
         <button onClick={handlePlay} className="bg-blue-500 text-white p-1 text-xs sm:text-sm rounded">
           {isListened ? 'Replay' : 'Play'}
         </button>
