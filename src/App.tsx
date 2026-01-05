@@ -5,7 +5,7 @@ import Randomize from './pages/Randomize';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/band-rotation">
       <div className="h-screen bg-gray-100 flex flex-col">
         <nav className="bg-blue-600 p-4">
           <div className="container mx-auto flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
